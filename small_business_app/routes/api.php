@@ -1,5 +1,7 @@
 <?php
 
+use App\App\Modules\Banks\Controllers\BankController;
+use App\Http\Middleware\SetPhpOptionMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +18,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::middleware([SetPhpOptionMiddleware::class,])->prefix("v1")->group(function (){
+
+    //ref
+    Route::apiResources(["/banks" => BankController::class]);
+
+    //docs
+
+    //reports
+
 });
