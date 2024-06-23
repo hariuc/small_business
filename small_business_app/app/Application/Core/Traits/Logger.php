@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App\Core\Traits;
+namespace App\Application\Core\Traits;
 
 use Illuminate\Support\Facades\Log;
 

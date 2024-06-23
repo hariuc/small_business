@@ -1,6 +1,6 @@
 <?php
 
-use App\App\Modules\Banks\Controllers\BankController;
+use App\Application\Modules\Banks\Controllers\BankController;
 use App\Http\Middleware\SetPhpOptionMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;

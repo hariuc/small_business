@@ -1,11 +1,11 @@
 <?php
 
-namespace App\App\Core\Interfaces;
+namespace App\Application\Core\Interfaces;
 
 use Illuminate\Http\Request;
 
 interface RepositoryInterface
 {
     public function index(Request $request);
-    public function show($id);
+    public function show(string $id);
 }

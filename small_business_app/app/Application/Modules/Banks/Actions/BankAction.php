@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App\Modules\Banks\Actions;
+namespace App\Application\Modules\Banks\Actions;
 
 use Exception;
 use Illuminate\Http\JsonResponse;

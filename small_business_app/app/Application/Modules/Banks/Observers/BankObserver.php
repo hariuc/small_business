@@ -1,9 +1,9 @@
 <?php
 
-namespace App\App\Modules\Banks\Observers;
+namespace App\Application\Modules\Banks\Observers;
 
-use App\App\Core\Traits\Logger;
-use App\App\Modules\Banks\Models\BankModel;
+use App\Application\Core\Traits\Logger;
+use App\Application\Modules\Banks\Models\BankModel;
 
 
 class BankObserver

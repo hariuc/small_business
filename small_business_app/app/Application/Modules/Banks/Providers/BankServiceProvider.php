@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App\Modules\Banks\Providers;
+namespace App\Application\Modules\Banks\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

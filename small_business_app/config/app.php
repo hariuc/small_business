@@ -198,7 +198,7 @@ return [
         /**
          * Small business providers
          */
-        App\App\Modules\Banks\Providers\BankServiceProvider::class,
+        App\Application\Modules\Banks\Providers\BankServiceProvider::class,
 
     ],
 
