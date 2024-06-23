@@ -3,6 +3,7 @@
 namespace App\Application\Modules\Banks\Services;
 
 use App\Application\Core\Traits\Logger;
+use App\Application\Modules\Banks\Actions\BankAction;
 use App\Application\Modules\Banks\Models\BankModel;
 use App\Application\Modules\Banks\Repositories\BankRepository;
 use Illuminate\Database\Eloquent\Collection;
@@ -44,12 +45,12 @@ class BankService
     public function store(array $requestParams): Model
     {
 
-        return $this->storeOrUpdate($requestParams);
+        return BankAction::storeOrUpdate($requestParams);
     }
 
     public function update(array $requestParams, string $id): Model
     {
-        return $this->storeOrUpdate($requestParams, $id);
+        return BankAction::storeOrUpdate($requestParams, $id);
     }
 
     public function delete(string $id): bool
@@ -60,7 +61,7 @@ class BankService
             $result = $element->delete();
             if ($result === false || $result === null) {
                 throw new Exception();
-            }else{
+            } else {
                 DB::commit();
                 return true;
             }
@@ -74,31 +75,4 @@ class BankService
         }
     }
 
-    private function storeOrUpdate(array $requestParams, string $id = ""): Model
-    {
-        try {
-            DB::beginTransaction();
-            if ($id !== "") {
-                $element = BankModel::query()->findOrFail($id);
-            } else {
-                $element = app(BankModel::class);
-            }
-
-            $element->bic = $requestParams["bic"];
-            $element->name = $requestParams["name"];
-            $element->corr_bank_account = $requestParams["corr_bank_account"];
-            $element->address = $requestParams["address"];
-            $element->phones = $requestParams["phones"];
-            $element->save();
-            DB::commit();
-            return $element;
-        } catch (Exception|ModelNotFoundException $e) {
-            DB::rollBack();
-            $this->error($e->getMessage());
-            //TODO: Обработать ошибку
-            throw new HttpResponseException(
-                response()->json(["data" => $e->getMessage()])
-            );
-        }
-    }
 }
