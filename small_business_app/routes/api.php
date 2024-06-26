@@ -31,6 +31,7 @@ Route::middleware([SetPhpOptionMiddleware::class,])->prefix("v1")->group(functio
     Route::apiResources(["/currencies" => CurrencyController::class]);
     Route::apiResources(["/unit-classifier" => UnitClassifierController::class]);
     Route::apiResources(["/customers" => CustomerController::class]);
+    Route::apiResources(["/customers-contracts" => CustomerController::class]);
 
     //docs
 

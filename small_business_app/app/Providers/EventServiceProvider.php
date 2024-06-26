@@ -7,7 +7,9 @@ use App\Application\Modules\Banks\Observers\BankObserver;
 use App\Application\Modules\Currencies\Models\CurrencyModel;
 use App\Application\Modules\Currencies\Observers\CurrencyObserver;
 use App\Models\CustomerModel;
+use App\Models\CustomersContractModel;
 use App\Models\UnitClassifierModel;
+use App\Observers\CustomerContractsObserver;
 use App\Observers\CustomerObserver;
 use App\Observers\UnitClassifierObserver;
 use Illuminate\Auth\Events\Registered;
@@ -36,6 +38,7 @@ class EventServiceProvider extends ServiceProvider
         CurrencyModel::observe(CurrencyObserver::class);
         UnitClassifierModel::observe(UnitClassifierObserver::class);
         CustomerModel::observe(CustomerObserver::class);
+        CustomersContractModel::observe(CustomerContractsObserver::class);
     }
 
     /**
