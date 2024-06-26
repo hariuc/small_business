@@ -4,6 +4,12 @@ namespace App\Providers;
 
 use App\Application\Modules\Banks\Models\BankModel;
 use App\Application\Modules\Banks\Observers\BankObserver;
+use App\Application\Modules\Currencies\Models\CurrencyModel;
+use App\Application\Modules\Currencies\Observers\CurrencyObserver;
+use App\Models\CustomerModel;
+use App\Models\UnitClassifierModel;
+use App\Observers\CustomerObserver;
+use App\Observers\UnitClassifierObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -27,6 +33,9 @@ class EventServiceProvider extends ServiceProvider
     public function boot(): void
     {
         BankModel::observe(BankObserver::class);
+        CurrencyModel::observe(CurrencyObserver::class);
+        UnitClassifierModel::observe(UnitClassifierObserver::class);
+        CustomerModel::observe(CustomerObserver::class);
     }
 
     /**

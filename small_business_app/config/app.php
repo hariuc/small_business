@@ -199,6 +199,7 @@ return [
          * Small business providers
          */
         App\Application\Modules\Banks\Providers\BankServiceProvider::class,
+        App\Application\Modules\Currencies\Providers\CurrencyProvider::class,
 
     ],
 

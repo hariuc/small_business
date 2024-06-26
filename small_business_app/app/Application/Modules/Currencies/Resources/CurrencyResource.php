@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Application\Modules\Banks\Resources;
+namespace App\Application\Modules\Currencies\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BankResource extends JsonResource
+class CurrencyResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,12 +16,9 @@ class BankResource extends JsonResource
     {
         return [
             "id" => $this->id,
-            "bic" => $this->bic,
+            "code" => $this->code,
             "name" => $this->name,
-            "corrBankAccount" => $this->corr_bank_account,
-            "city" => $this->city,
-            "address" => $this->address,
-            "phones" => $this->phones,
+            "fullName" => $this->full_name,
         ];
     }
 }

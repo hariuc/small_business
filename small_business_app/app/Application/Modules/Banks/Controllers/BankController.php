@@ -2,9 +2,11 @@
 
 namespace App\Application\Modules\Banks\Controllers;
 
+use App\Application\Core\Halpers\ExceptionHelper;
 use App\Application\Core\Traits\Logger;
 use App\Application\Modules\Banks\Actions\BankAction;
 use App\Application\Modules\Banks\Requests\BankRequest;
+use App\Application\Modules\Banks\Resources\BankResource;
 use App\Application\Modules\Banks\Services\BankService;
 use App\Http\Controllers\Controller;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -30,9 +32,10 @@ class BankController extends Controller
     public function index(Request $request): JsonResponse|JsonResource
     {
         try {
-            return JsonResource::collection($this->service->index($request));
+            $result = BankResource::collection($this->service->index($request));
+            return $result;
         } catch (Exception $e) {
-            return BankAction::responseWithException($e);
+            return ExceptionHelper::responseWithException($e);
         }
     }
 
@@ -43,7 +46,7 @@ class BankController extends Controller
     public function store(BankRequest $request): JsonResource
     {
         $response = $this->service->store($request->all());
-        return new JsonResource($response);
+        return new BankResource($response);
     }
 
     /**
@@ -54,9 +57,9 @@ class BankController extends Controller
         try {
             $response = $this->service->show($id);
 
-            return new JsonResource($response);
+            return new BankResource($response);
         } catch (Exception|ModelNotFoundException $e) {
-            return BankAction::responseWithException($e);
+            return ExceptionHelper::responseWithException($e);
         }
     }
 
@@ -64,7 +67,7 @@ class BankController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(BankRequest $request, string $id)
+    public function update(BankRequest $request, string $id): JsonResponse
     {
         $response = $this->service->update($request->all(), $id);
         return new JsonResponse($response);

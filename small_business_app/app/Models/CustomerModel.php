@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Application\Modules\Currencies\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class CurrencyModel extends Model
+class CustomerModel extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
-    protected $table = "scs_currencies";
+    protected $table = "scs_customers";
 }

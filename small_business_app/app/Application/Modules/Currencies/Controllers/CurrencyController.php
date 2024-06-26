@@ -2,17 +2,36 @@
 
 namespace App\Application\Modules\Currencies\Controllers;
 
+use App\Application\Core\Halpers\ExceptionHelper;
+use App\Application\Modules\Banks\Actions\BankAction;
+use App\Application\Modules\Banks\Resources\BankResource;
+use App\Application\Modules\Currencies\Resources\CurrencyResource;
+use App\Application\Modules\Currencies\Services\CurrencyService;
 use App\Http\Controllers\Controller;
+use Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class CurrencyController extends Controller
 {
+    public function __construct(private CurrencyService $currencyService)
+    {
+    }
+
+
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        try {
+            $result = CurrencyResource::collection($this->currencyService->index($request));
+            return $result;
+        } catch (Exception $e) {
+            return ExceptionHelper::responseWithException($e);
+        }
     }
 
     /**
@@ -20,23 +39,31 @@ class CurrencyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $response = $this->currencyService->store($request->all());
+        return new BankResource($response);
     }
+
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id): JsonResponse|JsonResource
     {
-        //
+        try {
+            $response = $this->currencyService->show($id);
+            return new CurrencyResource($response);
+        } catch (Exception|ModelNotFoundException $e) {
+            return ExceptionHelper::responseWithException($e);
+        }
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): JsonResponse
     {
-        //
+        $response = $this->currencyService->update($request->all(), $id);
+        return new JsonResponse($response);
     }
 
     /**
@@ -44,6 +71,7 @@ class CurrencyController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $this->currencyService->delete($id);
+        return response()->json(["data" => ["status" => "OK"]]);
     }
 }
