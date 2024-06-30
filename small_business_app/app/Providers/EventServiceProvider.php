@@ -7,11 +7,13 @@ use App\Application\Modules\Banks\Observers\BankObserver;
 use App\Application\Modules\Currencies\Models\CurrencyModel;
 use App\Application\Modules\Currencies\Observers\CurrencyObserver;
 use App\Models\BankAccountModel;
+use App\Models\CategoryModel;
 use App\Models\CustomerModel;
 use App\Models\CustomersContractModel;
 use App\Models\FunctionsModel;
 use App\Models\UnitClassifierModel;
 use App\Observers\BankAccountObserver;
+use App\Observers\CategoryObserver;
 use App\Observers\CustomerContractsObserver;
 use App\Observers\CustomerObserver;
 use App\Observers\FunctionObserver;
@@ -45,6 +47,7 @@ class EventServiceProvider extends ServiceProvider
         CustomersContractModel::observe(CustomerContractsObserver::class);
         BankAccountModel::observe(BankAccountObserver::class);
         FunctionsModel::observe(FunctionObserver::class);
+        CategoryModel::observe(CategoryObserver::class);
     }
 
     /**
