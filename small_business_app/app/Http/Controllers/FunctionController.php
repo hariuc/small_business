@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CustomersContractModel;
+use App\Models\FunctionsModel;
 use Illuminate\Http\Request;
 
-class CustomersContractController extends Controller
+class FunctionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class CustomersContractController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(CustomersContractModel $customersContractModel)
+    public function show(FunctionsModel $functionsModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class CustomersContractController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, CustomersContractModel $customersContractModel)
+    public function update(Request $request, FunctionsModel $functionsModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class CustomersContractController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(CustomersContractModel $customersContractModel)
+    public function destroy(FunctionsModel $functionsModel)
     {
         //
     }

@@ -10,4 +10,5 @@ enum DatabaseTableEnums: string
     case CUSTOMERS_TABLE = 'scs_customers';
     case CUSTOMERS_CONTRACTS = "scs_customers_contracts";
     case BANKS_ACCOUNTS = "scs_banks_accounts";
+    case  FUNCTIONS = "scs_functions";
 }

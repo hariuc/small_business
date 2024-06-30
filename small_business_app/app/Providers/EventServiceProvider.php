@@ -9,10 +9,12 @@ use App\Application\Modules\Currencies\Observers\CurrencyObserver;
 use App\Models\BankAccountModel;
 use App\Models\CustomerModel;
 use App\Models\CustomersContractModel;
+use App\Models\FunctionsModel;
 use App\Models\UnitClassifierModel;
 use App\Observers\BankAccountObserver;
 use App\Observers\CustomerContractsObserver;
 use App\Observers\CustomerObserver;
+use App\Observers\FunctionObserver;
 use App\Observers\UnitClassifierObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -42,6 +44,7 @@ class EventServiceProvider extends ServiceProvider
         CustomerModel::observe(CustomerObserver::class);
         CustomersContractModel::observe(CustomerContractsObserver::class);
         BankAccountModel::observe(BankAccountObserver::class);
+        FunctionsModel::observe(FunctionObserver::class);
     }
 
     /**

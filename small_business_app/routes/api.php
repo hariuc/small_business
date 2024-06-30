@@ -5,6 +5,7 @@ use App\Application\Modules\Banks\Controllers\BankController;
 use App\Application\Modules\Currencies\Controllers\CurrencyController;
 use App\Http\Controllers\BankAccountController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\FunctionController;
 use App\Http\Controllers\UnitClassifierController;
 use App\Http\Middleware\SetPhpOptionMiddleware;
 use Illuminate\Http\Request;
@@ -34,6 +35,7 @@ Route::middleware([SetPhpOptionMiddleware::class,])->prefix("v1")->group(functio
     Route::apiResources(["/customers" => CustomerController::class]);
     Route::apiResources(["/customers-contracts" => CustomerController::class]);
     Route::apiResources(["/banks-accounts" => BankAccountController::class]);
+    Route::apiResources(["/functions" => FunctionController::class]);
 
     //docs
 
