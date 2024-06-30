@@ -3,16 +3,16 @@
 namespace App\Observers;
 
 use App\Application\Core\Traits\Logger;
-use App\Models\NomenclatureModel;
+use App\Models\RItemModel;
 
-class NomenclatureObserver
+class ItemObserver
 {
     use Logger;
 
     /**
      * Handle the CustromerContractModel "created" event.
      */
-    public function created(NomenclatureModel $model): void
+    public function created(RItemModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class NomenclatureObserver
     /**
      * Handle the CustromerContractModel "updated" event.
      */
-    public function updated(NomenclatureModel $model): void
+    public function updated(RItemModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class NomenclatureObserver
     /**
      * Handle the CustromerContractModel "deleted" event.
      */
-    public function deleted(NomenclatureModel $model): void
+    public function deleted(RItemModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class NomenclatureObserver
     /**
      * Handle the CustromerContractModel "restored" event.
      */
-    public function restored(NomenclatureModel $model): void
+    public function restored(RItemModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class NomenclatureObserver
     /**
      * Handle the CustromerContractModel "force deleted" event.
      */
-    public function forceDeleted(NomenclatureModel $model): void
+    public function forceDeleted(RItemModel $model): void
     {
         $this->info(__METHOD__);
     }

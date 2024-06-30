@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class UnitClassifierModel extends Model
+class RTypePriceModel extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
-    protected $table = "scs_unit_classifier";
+    protected $table = 'scs_type_prices';
 }

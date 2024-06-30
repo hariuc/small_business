@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class NomenclatureModel extends Model
+class RItemModel extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
@@ -16,11 +16,11 @@ class NomenclatureModel extends Model
 
     public function category(): HasOne
     {
-        return $this->hasOne(CategoryModel::class, 'id', 'category_id');
+        return $this->hasOne(RCategoryModel::class, 'id', 'category_id');
     }
 
     public function unit(): HasOne
     {
-        return $this->hasOne(UnitClassifierModel::class, 'id', 'unit_id');
+        return $this->hasOne(RUnitClassifierModel::class, 'id', 'unit_id');
     }
 }

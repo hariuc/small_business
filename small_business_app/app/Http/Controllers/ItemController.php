@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RFunctionsModel;
+use App\Models\RItemModel;
 use Illuminate\Http\Request;
 
-class FunctionController extends Controller
+class ItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class FunctionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RFunctionsModel $functionsModel)
+    public function show(RItemModel $nomenclatureModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class FunctionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RFunctionsModel $functionsModel)
+    public function update(Request $request, RItemModel $nomenclatureModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class FunctionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RFunctionsModel $functionsModel)
+    public function destroy(RItemModel $nomenclatureModel)
     {
         //
     }

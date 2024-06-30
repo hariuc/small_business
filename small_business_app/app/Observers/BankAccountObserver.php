@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Application\Core\Traits\Logger;
-use App\Models\BankAccountModel;
+use App\Models\RBankAccountModel;
 
 class BankAccountObserver
 {
@@ -12,7 +12,7 @@ class BankAccountObserver
     /**
      * Handle the CustromerContractModel "created" event.
      */
-    public function created(BankAccountModel $model): void
+    public function created(RBankAccountModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class BankAccountObserver
     /**
      * Handle the CustromerContractModel "updated" event.
      */
-    public function updated(BankAccountModel $model): void
+    public function updated(RBankAccountModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class BankAccountObserver
     /**
      * Handle the CustromerContractModel "deleted" event.
      */
-    public function deleted(BankAccountModel $model): void
+    public function deleted(RBankAccountModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class BankAccountObserver
     /**
      * Handle the CustromerContractModel "restored" event.
      */
-    public function restored(BankAccountModel $model): void
+    public function restored(RBankAccountModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class BankAccountObserver
     /**
      * Handle the CustromerContractModel "force deleted" event.
      */
-    public function forceDeleted(BankAccountModel $model): void
+    public function forceDeleted(RBankAccountModel $model): void
     {
         $this->info(__METHOD__);
     }

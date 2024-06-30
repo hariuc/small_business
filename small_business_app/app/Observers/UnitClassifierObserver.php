@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Application\Core\Traits\Logger;
-use App\Models\UnitClassifierModel;
+use App\Models\RUnitClassifierModel;
 
 class UnitClassifierObserver
 {
@@ -12,7 +12,7 @@ class UnitClassifierObserver
     /**
      * Handle the UnitClassifierModel "created" event.
      */
-    public function created(UnitClassifierModel $unitClassifierModel): void
+    public function created(RUnitClassifierModel $unitClassifierModel): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class UnitClassifierObserver
     /**
      * Handle the UnitClassifierModel "updated" event.
      */
-    public function updated(UnitClassifierModel $unitClassifierModel): void
+    public function updated(RUnitClassifierModel $unitClassifierModel): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class UnitClassifierObserver
     /**
      * Handle the UnitClassifierModel "deleted" event.
      */
-    public function deleted(UnitClassifierModel $unitClassifierModel): void
+    public function deleted(RUnitClassifierModel $unitClassifierModel): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class UnitClassifierObserver
     /**
      * Handle the UnitClassifierModel "restored" event.
      */
-    public function restored(UnitClassifierModel $unitClassifierModel): void
+    public function restored(RUnitClassifierModel $unitClassifierModel): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class UnitClassifierObserver
     /**
      * Handle the UnitClassifierModel "force deleted" event.
      */
-    public function forceDeleted(UnitClassifierModel $unitClassifierModel): void
+    public function forceDeleted(RUnitClassifierModel $unitClassifierModel): void
     {
         $this->info(__METHOD__);
     }

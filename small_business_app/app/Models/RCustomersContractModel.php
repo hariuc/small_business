@@ -10,11 +10,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class BankAccountModel extends Model
+class RCustomersContractModel extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
-    protected $table = "scs_banks_accounts";
+    protected $table = "scs_customers_contracts";
 
     public function bank(): HasOne
     {
@@ -28,6 +28,6 @@ class BankAccountModel extends Model
 
     public function customer(): HasOne
     {
-        return $this->hasOne(CustomerModel::class, 'id', 'customer_id');
+        return $this->hasOne(RCustomerModel::class, 'id', 'customer_id');
     }
 }

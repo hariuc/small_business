@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class TypePriceModel extends Model
+class RFunctionsModel extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
-    protected $table = 'scs_type_prices';
+    protected $table = "scs_functions";
 }

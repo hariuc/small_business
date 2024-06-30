@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class FunctionsModel extends Model
+class RCustomerModel extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
-    protected $table = "scs_functions";
+    protected $table = "scs_customers";
 }

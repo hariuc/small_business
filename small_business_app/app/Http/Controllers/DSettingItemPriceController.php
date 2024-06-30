@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NomenclatureModel;
+use App\Models\DSettingPriceModel;
 use Illuminate\Http\Request;
 
-class NomenclatureController extends Controller
+class DSettingItemPriceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class NomenclatureController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(NomenclatureModel $nomenclatureModel)
+    public function show(DSettingPriceModel $dSettingItemPriceModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class NomenclatureController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, NomenclatureModel $nomenclatureModel)
+    public function update(Request $request, DSettingPriceModel $dSettingItemPriceModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class NomenclatureController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(NomenclatureModel $nomenclatureModel)
+    public function destroy(DSettingPriceModel $dSettingItemPriceModel)
     {
         //
     }

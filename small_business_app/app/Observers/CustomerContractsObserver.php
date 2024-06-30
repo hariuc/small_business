@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Application\Core\Traits\Logger;
-use App\Models\CustomersContractModel;
+use App\Models\RCustomersContractModel;
 
 
 class CustomerContractsObserver
@@ -13,7 +13,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "created" event.
      */
-    public function created(CustomersContractModel $model): void
+    public function created(RCustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -21,7 +21,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "updated" event.
      */
-    public function updated(CustomersContractModel $model): void
+    public function updated(RCustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -29,7 +29,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "deleted" event.
      */
-    public function deleted(CustomersContractModel $model): void
+    public function deleted(RCustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -37,7 +37,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "restored" event.
      */
-    public function restored(CustomersContractModel $model): void
+    public function restored(RCustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -45,7 +45,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "force deleted" event.
      */
-    public function forceDeleted(CustomersContractModel $model): void
+    public function forceDeleted(RCustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }
