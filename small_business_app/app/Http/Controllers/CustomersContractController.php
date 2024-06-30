@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CustomersContractModel;
 use Illuminate\Http\Request;
 
-class CustomersContractModelController extends Controller
+class CustomersContractController extends Controller
 {
     /**
      * Display a listing of the resource.
