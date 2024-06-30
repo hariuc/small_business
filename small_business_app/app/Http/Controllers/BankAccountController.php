@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RBankAccountModel;
+use App\Models\RefBankAccountModel;
 use Illuminate\Http\Request;
 
 class BankAccountController extends Controller
@@ -26,7 +26,7 @@ class BankAccountController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RBankAccountModel $bankAccountModel)
+    public function show(RefBankAccountModel $bankAccountModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class BankAccountController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RBankAccountModel $bankAccountModel)
+    public function update(Request $request, RefBankAccountModel $bankAccountModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class BankAccountController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RBankAccountModel $bankAccountModel)
+    public function destroy(RefBankAccountModel $bankAccountModel)
     {
         //
     }

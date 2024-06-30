@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RTypePriceModel;
+use App\Models\RefTypePriceModel;
 use Illuminate\Http\Request;
 
 class TypePriceController extends Controller
@@ -26,7 +26,7 @@ class TypePriceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RTypePriceModel $typePriceModel)
+    public function show(RefTypePriceModel $typePriceModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class TypePriceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RTypePriceModel $typePriceModel)
+    public function update(Request $request, RefTypePriceModel $typePriceModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class TypePriceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RTypePriceModel $typePriceModel)
+    public function destroy(RefTypePriceModel $typePriceModel)
     {
         //
     }

@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Application\Core\Traits\Logger;
-use App\Models\RCategoryModel;
+use App\Models\RefCategoryModel;
 
 class CategoryObserver
 {
@@ -12,7 +12,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "created" event.
      */
-    public function created(RCategoryModel $model): void
+    public function created(RefCategoryModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "updated" event.
      */
-    public function updated(RCategoryModel $model): void
+    public function updated(RefCategoryModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "deleted" event.
      */
-    public function deleted(RCategoryModel $model): void
+    public function deleted(RefCategoryModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "restored" event.
      */
-    public function restored(RCategoryModel $model): void
+    public function restored(RefCategoryModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "force deleted" event.
      */
-    public function forceDeleted(RCategoryModel $model): void
+    public function forceDeleted(RefCategoryModel $model): void
     {
         $this->info(__METHOD__);
     }

@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Application\Core\Traits\Logger;
-use App\Models\RItemModel;
+use App\Models\RefItemModel;
 
 class ItemObserver
 {
@@ -12,7 +12,7 @@ class ItemObserver
     /**
      * Handle the CustromerContractModel "created" event.
      */
-    public function created(RItemModel $model): void
+    public function created(RefItemModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class ItemObserver
     /**
      * Handle the CustromerContractModel "updated" event.
      */
-    public function updated(RItemModel $model): void
+    public function updated(RefItemModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class ItemObserver
     /**
      * Handle the CustromerContractModel "deleted" event.
      */
-    public function deleted(RItemModel $model): void
+    public function deleted(RefItemModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class ItemObserver
     /**
      * Handle the CustromerContractModel "restored" event.
      */
-    public function restored(RItemModel $model): void
+    public function restored(RefItemModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class ItemObserver
     /**
      * Handle the CustromerContractModel "force deleted" event.
      */
-    public function forceDeleted(RItemModel $model): void
+    public function forceDeleted(RefItemModel $model): void
     {
         $this->info(__METHOD__);
     }

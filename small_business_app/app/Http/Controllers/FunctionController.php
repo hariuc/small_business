@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RFunctionsModel;
+use App\Models\RefFunctionsModel;
 use Illuminate\Http\Request;
 
 class FunctionController extends Controller
@@ -26,7 +26,7 @@ class FunctionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RFunctionsModel $functionsModel)
+    public function show(RefFunctionsModel $functionsModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class FunctionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RFunctionsModel $functionsModel)
+    public function update(Request $request, RefFunctionsModel $functionsModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class FunctionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RFunctionsModel $functionsModel)
+    public function destroy(RefFunctionsModel $functionsModel)
     {
         //
     }

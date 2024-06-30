@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Application\Core\Traits\Logger;
-use App\Models\RFunctionsModel;
+use App\Models\RefFunctionsModel;
 
 class FunctionObserver
 {
@@ -12,7 +12,7 @@ class FunctionObserver
     /**
      * Handle the CustromerContractModel "created" event.
      */
-    public function created(RFunctionsModel $model): void
+    public function created(RefFunctionsModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class FunctionObserver
     /**
      * Handle the CustromerContractModel "updated" event.
      */
-    public function updated(RFunctionsModel $model): void
+    public function updated(RefFunctionsModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class FunctionObserver
     /**
      * Handle the CustromerContractModel "deleted" event.
      */
-    public function deleted(RFunctionsModel $model): void
+    public function deleted(RefFunctionsModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class FunctionObserver
     /**
      * Handle the CustromerContractModel "restored" event.
      */
-    public function restored(RFunctionsModel $model): void
+    public function restored(RefFunctionsModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class FunctionObserver
     /**
      * Handle the CustromerContractModel "force deleted" event.
      */
-    public function forceDeleted(RFunctionsModel $model): void
+    public function forceDeleted(RefFunctionsModel $model): void
     {
         $this->info(__METHOD__);
     }

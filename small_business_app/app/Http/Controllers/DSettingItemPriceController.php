@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DSettingPriceModel;
+use DocSettingPriceModel;
 use Illuminate\Http\Request;
 
 class DSettingItemPriceController extends Controller
@@ -26,7 +26,7 @@ class DSettingItemPriceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(DSettingPriceModel $dSettingItemPriceModel)
+    public function show(DocSettingPriceModel $dSettingItemPriceModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class DSettingItemPriceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, DSettingPriceModel $dSettingItemPriceModel)
+    public function update(Request $request, DocSettingPriceModel $dSettingItemPriceModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class DSettingItemPriceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(DSettingPriceModel $dSettingItemPriceModel)
+    public function destroy(DocSettingPriceModel $dSettingItemPriceModel)
     {
         //
     }

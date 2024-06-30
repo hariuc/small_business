@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RCategoryModel;
+use App\Models\RefCategoryModel;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -26,7 +26,7 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RCategoryModel $categoryModel)
+    public function show(RefCategoryModel $categoryModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RCategoryModel $categoryModel)
+    public function update(Request $request, RefCategoryModel $categoryModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RCategoryModel $categoryModel)
+    public function destroy(RefCategoryModel $categoryModel)
     {
         //
     }

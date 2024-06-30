@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Application\Core\Traits\Logger;
-use App\Models\RTypePriceModel;
+use App\Models\RefTypePriceModel;
 
 class TypePriceObserver
 {
@@ -12,7 +12,7 @@ class TypePriceObserver
     /**
      * Handle the CustromerContractModel "created" event.
      */
-    public function created(RTypePriceModel $model): void
+    public function created(RefTypePriceModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class TypePriceObserver
     /**
      * Handle the CustromerContractModel "updated" event.
      */
-    public function updated(RTypePriceModel $model): void
+    public function updated(RefTypePriceModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class TypePriceObserver
     /**
      * Handle the CustromerContractModel "deleted" event.
      */
-    public function deleted(RTypePriceModel $model): void
+    public function deleted(RefTypePriceModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class TypePriceObserver
     /**
      * Handle the CustromerContractModel "restored" event.
      */
-    public function restored(RTypePriceModel $model): void
+    public function restored(RefTypePriceModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class TypePriceObserver
     /**
      * Handle the CustromerContractModel "force deleted" event.
      */
-    public function forceDeleted(RTypePriceModel $model): void
+    public function forceDeleted(RefTypePriceModel $model): void
     {
         $this->info(__METHOD__);
     }

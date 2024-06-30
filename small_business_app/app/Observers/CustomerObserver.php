@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Application\Core\Traits\Logger;
-use App\Models\RCustomerModel;
+use App\Models\RefCustomerModel;
 
 
 class CustomerObserver
@@ -12,7 +12,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "created" event.
      */
-    public function created(RCustomerModel $cusromerModel): void
+    public function created(RefCustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "updated" event.
      */
-    public function updated(RCustomerModel $cusromerModel): void
+    public function updated(RefCustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "deleted" event.
      */
-    public function deleted(RCustomerModel $cusromerModel): void
+    public function deleted(RefCustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "restored" event.
      */
-    public function restored(RCustomerModel $cusromerModel): void
+    public function restored(RefCustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "force deleted" event.
      */
-    public function forceDeleted(RCustomerModel $cusromerModel): void
+    public function forceDeleted(RefCustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }

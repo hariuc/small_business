@@ -2,18 +2,18 @@
 
 namespace App\Providers;
 
-use App\Application\Modules\Banks\Models\BankModel;
-use App\Application\Modules\Banks\Observers\BankObserver;
-use App\Application\Modules\Currencies\Models\CurrencyModel;
-use App\Application\Modules\Currencies\Observers\CurrencyObserver;
-use App\Models\RBankAccountModel;
-use App\Models\RCategoryModel;
-use App\Models\RCustomerModel;
-use App\Models\RCustomersContractModel;
-use App\Models\RFunctionsModel;
-use App\Models\RItemModel;
-use App\Models\RTypePriceModel;
-use App\Models\RUnitClassifierModel;
+use App\SmallBusinessApp\Modules\Catalogs\Banks\Models\BankModel;
+use App\SmallBusinessApp\Modules\Catalogs\Banks\Observers\BankObserver;
+use App\SmallBusinessApp\Modules\Catalogs\Currencies\Models\CurrencyModel;
+use App\SmallBusinessApp\Modules\Catalogs\Currencies\Observers\CurrencyObserver;
+use App\Models\RefBankAccountModel;
+use App\Models\RefCategoryModel;
+use App\Models\RefCustomerModel;
+use App\Models\RefCustomersContractModel;
+use App\Models\RefFunctionsModel;
+use App\Models\RefItemModel;
+use App\Models\RefTypePriceModel;
+use App\Models\RefUnitClassifierModel;
 use App\Observers\BankAccountObserver;
 use App\Observers\CategoryObserver;
 use App\Observers\CustomerContractsObserver;
@@ -46,14 +46,14 @@ class EventServiceProvider extends ServiceProvider
     {
         BankModel::observe(BankObserver::class);
         CurrencyModel::observe(CurrencyObserver::class);
-        RUnitClassifierModel::observe(UnitClassifierObserver::class);
-        RCustomerModel::observe(CustomerObserver::class);
-        RCustomersContractModel::observe(CustomerContractsObserver::class);
-        RBankAccountModel::observe(BankAccountObserver::class);
-        RFunctionsModel::observe(FunctionObserver::class);
-        RCategoryModel::observe(CategoryObserver::class);
-        RItemModel::observe(ItemObserver::class);
-        RTypePriceModel::observe(TypePriceObserver::class);
+        RefUnitClassifierModel::observe(UnitClassifierObserver::class);
+        RefCustomerModel::observe(CustomerObserver::class);
+        RefCustomersContractModel::observe(CustomerContractsObserver::class);
+        RefBankAccountModel::observe(BankAccountObserver::class);
+        RefFunctionsModel::observe(FunctionObserver::class);
+        RefCategoryModel::observe(CategoryObserver::class);
+        RefItemModel::observe(ItemObserver::class);
+        RefTypePriceModel::observe(TypePriceObserver::class);
     }
 
     /**

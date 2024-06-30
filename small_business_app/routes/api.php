@@ -1,8 +1,8 @@
 <?php
 
 
-use App\Application\Modules\Banks\Controllers\BankController;
-use App\Application\Modules\Currencies\Controllers\CurrencyController;
+use App\SmallBusinessApp\Modules\Catalogs\Banks\Controllers\BankController;
+use App\SmallBusinessApp\Modules\Catalogs\Currencies\Controllers\CurrencyController;
 use App\Http\Controllers\BankAccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
@@ -40,7 +40,7 @@ Route::middleware([SetPhpOptionMiddleware::class,])->prefix("v1")->group(functio
     Route::apiResources(["/banks-accounts" => BankAccountController::class]);
     Route::apiResources(["/functions" => FunctionController::class]);
     Route::apiResources(["/categories" => CategoryController::class]);
-    Route::apiResources(["/nomenclaturies" => ItemController::class]);
+    Route::apiResources(["/items" => ItemController::class]);
     Route::apiResources(["/type-prices" => TypePriceController::class]);
 
     //docs

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RCustomersContractModel;
+use App\Models\RefCustomersContractModel;
 use Illuminate\Http\Request;
 
 class CustomerContractController extends Controller
@@ -26,7 +26,7 @@ class CustomerContractController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RCustomersContractModel $customersContractModel)
+    public function show(RefCustomersContractModel $customersContractModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class CustomerContractController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RCustomersContractModel $customersContractModel)
+    public function update(Request $request, RefCustomersContractModel $customersContractModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class CustomerContractController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RCustomersContractModel $customersContractModel)
+    public function destroy(RefCustomersContractModel $customersContractModel)
     {
         //
     }

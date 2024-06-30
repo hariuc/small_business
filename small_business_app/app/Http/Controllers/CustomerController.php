@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RCustomerModel;
+use App\Models\RefCustomerModel;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -26,7 +26,7 @@ class CustomerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RCustomerModel $customerModel)
+    public function show(RefCustomerModel $customerModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class CustomerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RCustomerModel $customerModel)
+    public function update(Request $request, RefCustomerModel $customerModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class CustomerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RCustomerModel $customerModel)
+    public function destroy(RefCustomerModel $customerModel)
     {
         //
     }

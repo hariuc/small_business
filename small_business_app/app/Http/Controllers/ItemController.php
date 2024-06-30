@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RItemModel;
+use App\Models\RefItemModel;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -26,7 +26,7 @@ class ItemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RItemModel $nomenclatureModel)
+    public function show(RefItemModel $nomenclatureModel)
     {
         //
     }
@@ -34,7 +34,7 @@ class ItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RItemModel $nomenclatureModel)
+    public function update(Request $request, RefItemModel $nomenclatureModel)
     {
         //
     }
@@ -42,7 +42,7 @@ class ItemController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RItemModel $nomenclatureModel)
+    public function destroy(RefItemModel $nomenclatureModel)
     {
         //
     }
