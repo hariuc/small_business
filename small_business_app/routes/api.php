@@ -3,6 +3,7 @@
 
 use App\Application\Modules\Banks\Controllers\BankController;
 use App\Application\Modules\Currencies\Controllers\CurrencyController;
+use App\Http\Controllers\BankAccountController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\UnitClassifierController;
 use App\Http\Middleware\SetPhpOptionMiddleware;
@@ -32,6 +33,7 @@ Route::middleware([SetPhpOptionMiddleware::class,])->prefix("v1")->group(functio
     Route::apiResources(["/unit-classifier" => UnitClassifierController::class]);
     Route::apiResources(["/customers" => CustomerController::class]);
     Route::apiResources(["/customers-contracts" => CustomerController::class]);
+    Route::apiResources(["/banks-accounts" => BankAccountController::class]);
 
     //docs
 

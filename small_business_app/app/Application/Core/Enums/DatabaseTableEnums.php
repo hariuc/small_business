@@ -9,4 +9,5 @@ enum DatabaseTableEnums: string
     case UNIT_CLASSIFIER = "scs_unit_classifier";
     case CUSTOMERS_TABLE = 'scs_customers';
     case CUSTOMERS_CONTRACTS = "scs_customers_contracts";
+    case BANKS_ACCOUNTS = "scs_banks_accounts";
 }
