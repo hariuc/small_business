@@ -7,6 +7,7 @@ use App\Http\Controllers\BankAccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FunctionController;
+use App\Http\Controllers\NomenclatureController;
 use App\Http\Controllers\UnitClassifierController;
 use App\Http\Middleware\SetPhpOptionMiddleware;
 use Illuminate\Http\Request;
@@ -38,6 +39,7 @@ Route::middleware([SetPhpOptionMiddleware::class,])->prefix("v1")->group(functio
     Route::apiResources(["/banks-accounts" => BankAccountController::class]);
     Route::apiResources(["/functions" => FunctionController::class]);
     Route::apiResources(["/categories" => CategoryController::class]);
+    Route::apiResources(["/nomenclaturies" => NomenclatureController::class]);
 
     //docs
 
