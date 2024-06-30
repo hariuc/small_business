@@ -12,6 +12,7 @@ use App\Models\CustomerModel;
 use App\Models\CustomersContractModel;
 use App\Models\FunctionsModel;
 use App\Models\NomenclatureModel;
+use App\Models\TypePriceModel;
 use App\Models\UnitClassifierModel;
 use App\Observers\BankAccountObserver;
 use App\Observers\CategoryObserver;
@@ -19,6 +20,7 @@ use App\Observers\CustomerContractsObserver;
 use App\Observers\CustomerObserver;
 use App\Observers\FunctionObserver;
 use App\Observers\NomenclatureObserver;
+use App\Observers\TypePriceObserver;
 use App\Observers\UnitClassifierObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -51,6 +53,7 @@ class EventServiceProvider extends ServiceProvider
         FunctionsModel::observe(FunctionObserver::class);
         CategoryModel::observe(CategoryObserver::class);
         NomenclatureModel::observe(NomenclatureObserver::class);
+        TypePriceModel::observe(TypePriceObserver::class);
     }
 
     /**
