@@ -2,13 +2,11 @@
 
 namespace App\Providers;
 
-use App\Models\RefCategoryModel;
 use App\Models\RefCustomersContractModel;
 use App\Models\RefFunctionsModel;
 use App\Models\RefItemModel;
 use App\Models\RefTypePriceModel;
 use App\Models\RefUnitClassifierModel;
-use App\Observers\CategoryObserver;
 use App\Observers\CustomerContractsObserver;
 use App\Observers\FunctionObserver;
 use App\Observers\ItemObserver;
@@ -18,6 +16,8 @@ use App\SmallBusinessApp\Modules\Catalogs\Banks\Models\BankModel;
 use App\SmallBusinessApp\Modules\Catalogs\Banks\Observers\BankObserver;
 use App\SmallBusinessApp\Modules\Catalogs\BanksAccounts\Models\BankAccountModel;
 use App\SmallBusinessApp\Modules\Catalogs\BanksAccounts\Observers\BankAccountObserver;
+use App\SmallBusinessApp\Modules\Catalogs\Category\Models\CategoryModel;
+use App\SmallBusinessApp\Modules\Catalogs\Category\Observers\CategoryObserver;
 use App\SmallBusinessApp\Modules\Catalogs\Currencies\Models\CurrencyModel;
 use App\SmallBusinessApp\Modules\Catalogs\Currencies\Observers\CurrencyObserver;
 use App\SmallBusinessApp\Modules\Catalogs\Customers\Models\CustomerModel;
@@ -51,7 +51,7 @@ class EventServiceProvider extends ServiceProvider
         RefCustomersContractModel::observe(CustomerContractsObserver::class);
         BankAccountModel::observe(BankAccountObserver::class);
         RefFunctionsModel::observe(FunctionObserver::class);
-        RefCategoryModel::observe(CategoryObserver::class);
+        CategoryModel::observe(CategoryObserver::class);
         RefItemModel::observe(ItemObserver::class);
         RefTypePriceModel::observe(TypePriceObserver::class);
     }

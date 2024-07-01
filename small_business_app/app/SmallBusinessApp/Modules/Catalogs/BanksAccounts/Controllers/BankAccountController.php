@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\SmallBusinessApp\Modules\Catalogs\BanksAccounts\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\SmallBusinessApp\Modules\Catalogs\BanksAccounts\Models\BankAccountModel;
 use Illuminate\Http\Request;
 

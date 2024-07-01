@@ -202,6 +202,7 @@ return [
         App\SmallBusinessApp\Modules\Catalogs\Currencies\Providers\CurrencyProvider::class,
         App\SmallBusinessApp\Modules\Catalogs\Customers\Providers\CustomerProvider::class,
         App\SmallBusinessApp\Modules\Catalogs\BanksAccounts\Providers\BankAccountrProvider::class,
+        App\SmallBusinessApp\Modules\Catalogs\Category\Providers\CategoryProvider::class,
 
     ],
 

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\SmallBusinessApp\Modules\Catalogs\Category\Controllers;
 
-use App\Models\RefCategoryModel;
+use App\Http\Controllers\Controller;
+use App\SmallBusinessApp\Modules\Catalogs\Category\Models\CategoryModel;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -26,7 +27,7 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RefCategoryModel $categoryModel)
+    public function show(CategoryModel $categoryModel)
     {
         //
     }
@@ -34,7 +35,7 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RefCategoryModel $categoryModel)
+    public function update(Request $request, CategoryModel $categoryModel)
     {
         //
     }
@@ -42,7 +43,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RefCategoryModel $categoryModel)
+    public function destroy(CategoryModel $categoryModel)
     {
         //
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Observers;
+namespace App\SmallBusinessApp\Modules\Catalogs\Category\Observers;
 
 use App\SmallBusinessApp\Core\Traits\Logger;
-use App\Models\RefCategoryModel;
+use App\SmallBusinessApp\Modules\Catalogs\Category\Models\CategoryModel;
 
 class CategoryObserver
 {
@@ -12,7 +12,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "created" event.
      */
-    public function created(RefCategoryModel $model): void
+    public function created(CategoryModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "updated" event.
      */
-    public function updated(RefCategoryModel $model): void
+    public function updated(CategoryModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "deleted" event.
      */
-    public function deleted(RefCategoryModel $model): void
+    public function deleted(CategoryModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "restored" event.
      */
-    public function restored(RefCategoryModel $model): void
+    public function restored(CategoryModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class CategoryObserver
     /**
      * Handle the CustromerContractModel "force deleted" event.
      */
-    public function forceDeleted(RefCategoryModel $model): void
+    public function forceDeleted(CategoryModel $model): void
     {
         $this->info(__METHOD__);
     }
