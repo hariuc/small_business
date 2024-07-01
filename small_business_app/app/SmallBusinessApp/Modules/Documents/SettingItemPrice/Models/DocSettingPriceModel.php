@@ -2,6 +2,7 @@
 
 namespace App\SmallBusinessApp\Modules\Documents\SettingItemPrice\Models;
 
+use App\Models\RefUser;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -17,7 +18,7 @@ class DocSettingPriceModel extends Model
 
     public function user(): HasOne
     {
-        return $this->hasOne(\App\Models\RefUser::class, "id", "user_id");
+        return $this->hasOne(RefUser::class, "id", "user_id");
     }
     public function typePrice(): HasOne
     {

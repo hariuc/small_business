@@ -10,7 +10,6 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/small_business_app/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/small_business_app/tests/Unit" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/small_business_app/packages/SmallBusinessApp/Modules/Documents/SettingPrice/src" isTestSource="false" packagePrefix="SmallBusinessApp\Documents\SettingPrice\" />
       <excludeFolder url="file://$MODULE_DIR$/small_business_app/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/small_business_app/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/small_business_app/vendor/doctrine/collections" />

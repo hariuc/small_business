@@ -2,7 +2,7 @@
 
 namespace App\Observers;
 
-use App\Application\Core\Traits\Logger;
+use App\SmallBusinessApp\Core\Traits\Logger;
 use App\Models\RefCustomersContractModel;
 
 

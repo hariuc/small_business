@@ -198,8 +198,8 @@ return [
         /**
          * Small business providers
          */
-        App\Application\Modules\Banks\Providers\BankServiceProvider::class,
-        App\Application\Modules\Currencies\Providers\CurrencyProvider::class,
+        App\SmallBusinessApp\Modules\Catalogs\Banks\Providers\BankServiceProvider::class,
+        App\SmallBusinessApp\Modules\Catalogs\Currencies\Providers\CurrencyProvider::class,
 
     ],
 

@@ -2,7 +2,7 @@
 
 namespace SmartBusinessApp\Documents\SettingPrice\DataBase;
 
-use App\Application\Core\Enums\DatabaseTableEnums;
+use App\SmallBusinessApp\Core\Enums\DatabaseTableEnums;
 use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;

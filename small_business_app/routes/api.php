@@ -31,7 +31,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::middleware([SetPhpOptionMiddleware::class,])->prefix("v1")->group(function () {
 
-    //ref
+    //catalogs
     Route::apiResources(["/banks" => BankController::class]);
     Route::apiResources(["/currencies" => CurrencyController::class]);
     Route::apiResources(["/unit-classifier" => UnitClassifierController::class]);
@@ -43,7 +43,7 @@ Route::middleware([SetPhpOptionMiddleware::class,])->prefix("v1")->group(functio
     Route::apiResources(["/items" => ItemController::class]);
     Route::apiResources(["/type-prices" => TypePriceController::class]);
 
-    //docs
+    //documents
 
     //reports
 
