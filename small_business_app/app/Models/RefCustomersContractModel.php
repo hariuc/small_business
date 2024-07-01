@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Application\Modules\Banks\Models\BankModel;
 use App\Application\Modules\Currencies\Models\CurrencyModel;
+use App\SmallBusinessApp\Modules\Catalogs\Customers\Models\CustomerModel;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -28,6 +29,6 @@ class RefCustomersContractModel extends Model
 
     public function customer(): HasOne
     {
-        return $this->hasOne(RefCustomerModel::class, 'id', 'customer_id');
+        return $this->hasOne(CustomerModel::class, 'id', 'customer_id');
     }
 }

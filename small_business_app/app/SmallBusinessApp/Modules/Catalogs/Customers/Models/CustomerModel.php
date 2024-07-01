@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models;
+namespace App\SmallBusinessApp\Modules\Catalogs\Customers\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class RefCustomerModel extends Model
+class CustomerModel extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 

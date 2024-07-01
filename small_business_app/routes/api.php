@@ -1,16 +1,16 @@
 <?php
 
 
-use App\SmallBusinessApp\Modules\Catalogs\Banks\Controllers\BankController;
-use App\SmallBusinessApp\Modules\Catalogs\Currencies\Controllers\CurrencyController;
 use App\Http\Controllers\BankAccountController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FunctionController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\TypePriceController;
 use App\Http\Controllers\UnitClassifierController;
 use App\Http\Middleware\SetPhpOptionMiddleware;
+use App\SmallBusinessApp\Modules\Catalogs\Banks\Controllers\BankController;
+use App\SmallBusinessApp\Modules\Catalogs\Currencies\Controllers\CurrencyController;
+use App\SmallBusinessApp\Modules\Catalogs\Customers\Controllers\CustomerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

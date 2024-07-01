@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Observers;
+namespace App\SmallBusinessApp\Modules\Catalogs\Customers\Observers;
 
 use App\SmallBusinessApp\Core\Traits\Logger;
-use App\Models\RefCustomerModel;
+use App\SmallBusinessApp\Modules\Catalogs\Customers\Models\CustomerModel;
 
 
 class CustomerObserver
@@ -12,7 +12,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "created" event.
      */
-    public function created(RefCustomerModel $cusromerModel): void
+    public function created(CustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }
@@ -20,7 +20,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "updated" event.
      */
-    public function updated(RefCustomerModel $cusromerModel): void
+    public function updated(CustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }
@@ -28,7 +28,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "deleted" event.
      */
-    public function deleted(RefCustomerModel $cusromerModel): void
+    public function deleted(CustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }
@@ -36,7 +36,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "restored" event.
      */
-    public function restored(RefCustomerModel $cusromerModel): void
+    public function restored(CustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }
@@ -44,7 +44,7 @@ class CustomerObserver
     /**
      * Handle the CusromerModel "force deleted" event.
      */
-    public function forceDeleted(RefCustomerModel $cusromerModel): void
+    public function forceDeleted(CustomerModel $cusromerModel): void
     {
         $this->info(__METHOD__);
     }

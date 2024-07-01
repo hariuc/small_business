@@ -1,16 +1,18 @@
 <?php
 
-namespace App\Models;
+namespace App\SmallBusinessApp\Modules\Catalogs\BanksAccounts\Models;
 
-use App\Application\Modules\Banks\Models\BankModel;
-use App\Application\Modules\Currencies\Models\CurrencyModel;
+
+use App\SmallBusinessApp\Modules\Catalogs\Banks\Models\BankModel;
+use App\SmallBusinessApp\Modules\Catalogs\Currencies\Models\CurrencyModel;
+use App\SmallBusinessApp\Modules\Catalogs\Customers\Models\CustomerModel;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class RefBankAccountModel extends Model
+class BankAccountModel extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
@@ -28,6 +30,6 @@ class RefBankAccountModel extends Model
 
     public function customer(): HasOne
     {
-        return $this->hasOne(RefCustomerModel::class, 'id', 'customer_id');
+        return $this->hasOne(CustomerModel::class, 'id', 'customer_id');
     }
 }
