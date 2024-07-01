@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\SmallBusinessApp\Modules\Catalogs\CustomersContracts\Resources;
 
-use App\Application\Modules\Currencies\Resources\CurrencyResource;
+
+use App\SmallBusinessApp\Modules\Catalogs\Currencies\Resources\CurrencyResource;
 use App\SmallBusinessApp\Modules\Catalogs\Customers\Resources\CustomerResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;

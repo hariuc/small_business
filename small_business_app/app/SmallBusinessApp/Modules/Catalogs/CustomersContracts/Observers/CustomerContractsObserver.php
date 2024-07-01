@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Observers;
+namespace App\SmallBusinessApp\Modules\Catalogs\CustomersContracts\Observers;
 
 use App\SmallBusinessApp\Core\Traits\Logger;
-use App\Models\RefCustomersContractModel;
+use App\SmallBusinessApp\Modules\Catalogs\CustomersContracts\Models\CustomersContractModel;
 
 
 class CustomerContractsObserver
@@ -13,7 +13,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "created" event.
      */
-    public function created(RefCustomersContractModel $model): void
+    public function created(CustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -21,7 +21,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "updated" event.
      */
-    public function updated(RefCustomersContractModel $model): void
+    public function updated(CustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -29,7 +29,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "deleted" event.
      */
-    public function deleted(RefCustomersContractModel $model): void
+    public function deleted(CustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -37,7 +37,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "restored" event.
      */
-    public function restored(RefCustomersContractModel $model): void
+    public function restored(CustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }
@@ -45,7 +45,7 @@ class CustomerContractsObserver
     /**
      * Handle the CustromerContractModel "force deleted" event.
      */
-    public function forceDeleted(RefCustomersContractModel $model): void
+    public function forceDeleted(CustomersContractModel $model): void
     {
         $this->info(__METHOD__);
     }

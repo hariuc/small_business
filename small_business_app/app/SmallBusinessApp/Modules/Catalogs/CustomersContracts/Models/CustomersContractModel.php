@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\SmallBusinessApp\Modules\Catalogs\CustomersContracts\Models;
 
 use App\Application\Modules\Banks\Models\BankModel;
 use App\Application\Modules\Currencies\Models\CurrencyModel;
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class RefCustomersContractModel extends Model
+class CustomersContractModel extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 

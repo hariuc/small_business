@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\SmallBusinessApp\Modules\Catalogs\CustomersContracts\Controllers;
 
-use App\Models\RefCustomersContractModel;
+use App\Http\Controllers\Controller;
+use App\SmallBusinessApp\Modules\Catalogs\CustomersContracts\Models\CustomersContractModel;
 use Illuminate\Http\Request;
 
 class CustomerContractController extends Controller
@@ -26,7 +27,7 @@ class CustomerContractController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(RefCustomersContractModel $customersContractModel)
+    public function show(CustomersContractModel $customersContractModel)
     {
         //
     }
@@ -34,7 +35,7 @@ class CustomerContractController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RefCustomersContractModel $customersContractModel)
+    public function update(Request $request, CustomersContractModel $customersContractModel)
     {
         //
     }
@@ -42,7 +43,7 @@ class CustomerContractController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RefCustomersContractModel $customersContractModel)
+    public function destroy(CustomersContractModel $customersContractModel)
     {
         //
     }
